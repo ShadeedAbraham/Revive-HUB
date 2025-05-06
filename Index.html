@@ -11,7 +11,7 @@
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Meta Tags for SEO and Social Sharing -->
+  <!-- Meta Tags -->
   <meta name="description" content="ReviveHub empowers communities to submit and revive blighted properties across the nation. Join the movement." />
   <meta property="og:title" content="ReviveHub | Urban Revival Platform" />
   <meta property="og:description" content="Submit vacant properties. Partner in redevelopment. Rebuild the future." />
@@ -101,6 +101,23 @@
       color: #2F2E41;
     }
 
+    .step {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .step img {
+      width: 150px;
+      border-radius: 8px;
+    }
+
+    .step-description {
+      flex: 1;
+    }
+
     form input, form textarea {
       width: 100%;
       padding: 14px;
@@ -121,25 +138,6 @@
       margin-top: 10px;
     }
 
-    .icons-row {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .icon-box {
-      width: 180px;
-      text-align: center;
-      margin: 10px;
-    }
-
-    .icon-box i {
-      font-size: 36px;
-      color: #2EB67D;
-      margin-bottom: 10px;
-    }
-
     footer {
       background: #2F2E41;
       color: white;
@@ -153,7 +151,7 @@
 
   <!-- Navigation -->
   <nav>
-    <img src="logo.png" alt="ReviveHub Logo">
+    <img src="images/logo.png" alt="ReviveHub Logo">
     <ul>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#submit">Submit</a></li>
@@ -164,7 +162,7 @@
   <!-- Hero Section -->
   <header>
     <h1>Revive Blight, Rebuild Hope</h1>
-    <p>ReviveHub empowers communities to transform neglected properties into opportunity — through crowdsourced submissions and real estate partnerships.</p>
+    <p>ReviveHub empowers communities to transform neglected properties into thriving assets by crowdsourcing local knowledge and connecting with real estate developers, investors, and visionaries nationwide.</p>
     <a href="#submit" class="btn">Submit a Property</a>
     <a href="#partner" class="btn">Partner With Us</a>
   </header>
@@ -172,22 +170,36 @@
   <!-- How It Works -->
   <section id="how">
     <h2 class="section-title">How It Works</h2>
-    <div class="icons-row">
-      <div class="icon-box">
-        <i class="fas fa-camera"></i>
-        <p>Snap a Photo</p>
+
+    <div class="step">
+      <img src="images/Snap a photo.png" alt="Snap a photo">
+      <div class="step-description">
+        <h3>Step 1: Snap a Photo</h3>
+        <p>Spot a vacant, abandoned, or blighted property in your area? Take a clear photo showing its condition. You're not just capturing an image — you're helping spark a transformation.</p>
       </div>
-      <div class="icon-box">
-        <i class="fas fa-map-marker-alt"></i>
-        <p>Enter Address</p>
+    </div>
+
+    <div class="step">
+      <img src="images/EnterAddress.png" alt="Enter Address">
+      <div class="step-description">
+        <h3>Step 2: Enter the Address</h3>
+        <p>Type in the street address or closest cross streets. Even an approximate location helps us identify the property and run our initial analysis.</p>
       </div>
-      <div class="icon-box">
-        <i class="fas fa-hammer"></i>
-        <p>We Redevelop</p>
+    </div>
+
+    <div class="step">
+      <img src="images/We redevelop.png" alt="We Redevelop">
+      <div class="step-description">
+        <h3>Step 3: We Redevelop</h3>
+        <p>Once received, we research ownership, zoning, and value — then explore options like wholesale, fix-and-flip, green space conversion, or community use. You helped light the spark.</p>
       </div>
-      <div class="icon-box">
-        <i class="fas fa-check-circle"></i>
-        <p>Track Results</p>
+    </div>
+
+    <div class="step">
+      <img src="images/trackresults.png" alt="Track Results">
+      <div class="step-description">
+        <h3>Step 4: Track Results</h3>
+        <p>Stay connected as we revive what was lost. Watch the evolution, share in the success, and take pride in your role in reshaping your community — one property at a time.</p>
       </div>
     </div>
   </section>
