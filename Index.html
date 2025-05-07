@@ -168,7 +168,24 @@
         max-width: 80%;
       }
     }
-  </style>
+  .swiper-pagination span {
+  background-color: #FFD700;
+  color: #2F2E41;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 4px;
+  display: inline-block;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #2F2E41;
+  color: #FFD700;
+  transform: scale(1.1);
+}
+</style>
 </head>
 <body>
   <!-- Navigation -->
@@ -256,18 +273,36 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
-      // loop removed
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      initialSlide: 0,
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
       autoplay: {
         delay: 3500,
         disableOnInteraction: false,
       },
-      centeredSlides: false,
-      slidesPerView: 'auto',
-      initialSlide: 0,
-      spaceBetween: 30,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        renderBullet: function (index, className) {
+          const labels = [
+            'Step 1',
+            'Step 2',
+            'Step 3',
+            'Step 4',
+            'Step 5',
+            'Step 6'
+          ];
+          return '<span class="' + className + '">' + labels[index] + '</span>';
+        },
       },
     });
   </script>
