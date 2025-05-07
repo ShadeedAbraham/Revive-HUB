@@ -215,7 +215,8 @@
 </div>
         <div class="swiper-slide">
   <img src="images/ownership.png" alt="Step 6">
-  <h3>Step 6: Pathways to Ownership</h3>
+  <h3>Step 6: Pathways to Co-Invest</h3>
+<p>Contributors may unlock opportunities to co-invest in projects they’ve initiated — building generational wealth through shared ownership.</p>
 </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -294,3 +295,17 @@
       },
     });
   </script>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
