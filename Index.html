@@ -151,7 +151,7 @@
 
   <!-- Navigation -->
   <nav>
-    <img src="images/logo.png" alt="ReviveHub Logo" style="height: 60px;">
+    <img src="images/logo.png" alt="ReviveHub Logo" style="height: 75px;">
     <ul>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#submit">Submit</a></li>
@@ -161,9 +161,23 @@
 
   <!-- Hero Section -->
   <header>
-  <div style="text-align: center; padding: 60px 20px;">
-    <img src="images/overview.png" alt="ReviveHub Overview" style="width: 100%; max-width: 800px; border-radius: 12px;">
+  <div class="slideshow" style="position: relative; max-width: 100%; margin: auto; overflow: hidden; height: 400px;">
+    <img src="images/slide1.png" class="slide" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <img src="images/slide2.png" class="slide" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+    <img src="images/slide3.png" class="slide" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+    <img src="images/slide4.png" class="slide" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+    <img src="images/slide5.png" class="slide" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+    <img src="images/slide6.png" class="slide" style="width: 100%; height: 100%; object-fit: cover; display: none;">
   </div>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[currentSlide].style.display = 'none';
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].style.display = 'block';
+    }, 4000);
+  </script>
 </header>
 
   <!-- How It Works -->
@@ -185,6 +199,35 @@
   </ul>
   <div style="text-align: center;">
     <a href="#submit" class="btn">Upload Your First Property</a>
+  </div>
+  <br><br>
+  <div class="step">
+    <img src="images/Snap a photo.png" alt="Snap a photo">
+    <div class="step-description">
+      <h3>Step 1: Snap a Photo</h3>
+      <p>Spot a vacant, abandoned, or blighted property in your area? Take a clear photo showing its condition. You're not just capturing an image — you're helping spark a transformation.</p>
+    </div>
+  </div>
+  <div class="step">
+    <img src="images/EnterAddress.png" alt="Enter Address">
+    <div class="step-description">
+      <h3>Step 2: Enter the Address</h3>
+      <p>Type in the street address or closest cross streets. Even an approximate location helps us identify the property and run our initial analysis.</p>
+    </div>
+  </div>
+  <div class="step">
+    <img src="images/We redevelop.png" alt="We Redevelop">
+    <div class="step-description">
+      <h3>Step 3: We Redevelop</h3>
+      <p>Once received, we research ownership, zoning, and value — then explore options like wholesale, fix-and-flip, green space conversion, or community use. You helped light the spark.</p>
+    </div>
+  </div>
+  <div class="step">
+    <img src="images/trackresults.png" alt="Track Results">
+    <div class="step-description">
+      <h3>Step 4: Track Results</h3>
+      <p>Stay connected as we revive what was lost. Watch the evolution, share in the success, and take pride in your role in reshaping your community — one property at a time.</p>
+    </div>
   </div>
 </section>
 
