@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  <!-- Meta Tags -->
   <meta name="description" content="ReviveHub empowers communities to submit and revive blighted properties across the nation. Join the movement." />
   <meta property="og:title" content="ReviveHub | Urban Revival Platform" />
   <meta property="og:description" content="Submit vacant properties. Partner in redevelopment. Rebuild the future." />
@@ -68,7 +67,7 @@
 
     .swiper {
       width: 100%;
-      max-width: 900px;
+      max-width: 700px;
       margin: 0 auto 40px;
     }
 
@@ -76,6 +75,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       text-align: center;
       padding: 20px;
       border-radius: 12px;
@@ -159,7 +159,6 @@
   </style>
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
     <img src="images/logo.png" alt="ReviveHub Logo">
     <ul>
@@ -169,7 +168,6 @@
     </ul>
   </nav>
 
-  <!-- Swipeable Slideshow Hero -->
   <header>
     <h1 class="section-title">How ReviveHub Works</h1>
     <div class="swiper">
@@ -195,14 +193,11 @@
           <p>Follow the impact from eyesore to asset and share in the results.</p>
         </div>
       </div>
-      <!-- Optional Swiper Pagination -->
       <div class="swiper-pagination"></div>
     </div>
-    <br>
     <a href="#submit" class="btn">Submit Your First Property</a>
   </header>
 
-  <!-- Submission Form -->
   <section id="submit">
     <h2 class="section-title">Submit a Property</h2>
     <form name="property-submission" method="POST" data-netlify="true">
@@ -215,7 +210,6 @@
     </form>
   </section>
 
-  <!-- Partner With Us -->
   <section id="partner">
     <h2 class="section-title">Partner With Us</h2>
     <p style="text-align: center; max-width: 700px; margin: auto;">
@@ -226,13 +220,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     &copy; 2025 ReviveHub • Built by Home Rescue LLC<br>
     <a href="#" style="color: #FFD700; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #FFD700; text-decoration: none;">Terms</a>
   </footer>
 
-  <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
@@ -241,6 +233,7 @@
         delay: 3500,
         disableOnInteraction: false,
       },
+      centeredSlides: true,
       slidesPerView: 1,
       spaceBetween: 30,
       pagination: {
