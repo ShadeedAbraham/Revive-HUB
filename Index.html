@@ -111,14 +111,27 @@
     }
 
     .btn {
-      background: #FFD700;
-      border: none;
-      padding: 12px 25px;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
+  background: #FFD700;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover, .btn:focus {
+  background: #e6c200;
+  animation: pulse 1.8s infinite;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 0 rgba(46, 182, 125, 0.7);
+}
+
+.btn:active {
+  box-shadow: 0 0 0 0 rgba(46, 182, 125, 0.7);
+  transform: scale(0.97);
+  transition: box-shadow 0.3s ease, transform 0.1s ease;
+}
 
     .btn:hover {
       background: #e6c200;
@@ -135,21 +148,29 @@
     }
 
     form button {
-      background: #2EB67D;
-      color: white;
-      padding: 14px 25px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: background 0.3s, transform 0.2s;
-    }
+  background: #2EB67D;
+  color: white;
+  padding: 14px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover, form button:focus {
+  animation: pulse 1.8s infinite;
+  background: #1f7d53;
+  transform: scale(1.05);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
     form button:hover {
-      background: #259d6b;
-      transform: scale(1.03);
-    }
+  background: #1f7d53;
+  transform: scale(1.05);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
     footer {
       background: #2F2E41;
@@ -170,6 +191,39 @@
     }
   
 
+
+form input:focus, form textarea:focus {
+  border-color: #2EB67D;
+  box-shadow: 0 0 5px rgba(46, 182, 125, 0.5);
+  outline: none;
+}
+
+form button:focus {
+  box-shadow: 0 0 8px rgba(46, 182, 125, 0.7);
+  outline: none;
+}
+
+form button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 182, 125, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(46, 182, 125, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 182, 125, 0);
+  }
+}
+
+form button:active {
+  box-shadow: 0 0 0 0 rgba(46, 182, 125, 0.7);
+  transform: scale(0.97);
+  transition: box-shadow 0.3s ease, transform 0.1s ease;
+}
 
 </style>
 </head>
@@ -227,17 +281,22 @@
   <!-- Submission Section -->
   <section id="submit">
     <h2 class="section-title">Submit a Property</h2>
-    <form name="property-submission" method="POST" data-netlify="true">
-      <input type="text" name="address" placeholder="Property Address" required>
-      <input type="text" name="citystate" placeholder="City, State" required>
+    <form name="property-submission" method="POST" data-netlify="true" style="max-width: 600px; margin: 0 auto;">
+      <input type="text" name="address1" placeholder="Address Line 1" required>
+      <input type="text" name="address2" placeholder="Address Line 2 (Apt, Unit, etc.)">
+      <input type="text" name="city" placeholder="City" required>
+      <input type="text" name="state" placeholder="State" required>
+      <input type="text" name="zip" placeholder="ZIP Code" required>
       <input type="file" name="photo" accept="image/*">
       <textarea name="description" rows="4" placeholder="Describe the property (optional)"></textarea>
       <input type="email" name="email" placeholder="Your Email (for updates)">
-      <button type="submit">Send Property</button>
+      <div style="text-align:center;">
+        <button type="submit">Send Property</button>
+      </div>
     </form>
   </section>
 
-  <section id="incentive" style="padding: 60px 20px; background: #ffffff; color: #2F2E41; text-align: center;">
+  <section id="incentive" style="padding: 60px 20px; background: url('images/blight-transformation-clean.jpg') center/cover no-repeat; color: #2F2E41; text-align: center;">
   <h2 class="section-title" style="color:#2F2E41;">Community Incentive Model</h2>
   <p style="max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem;">
     At ReviveHub, we empower everyday citizens to become agents of change in their neighborhoods. When a user uploads a photo and details of a blighted or abandoned property, they’re not just reporting a problem—they’re unlocking a potential opportunity.
