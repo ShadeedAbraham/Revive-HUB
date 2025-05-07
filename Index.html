@@ -10,6 +10,7 @@
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <!-- Meta Tags -->
   <meta name="description" content="ReviveHub empowers communities to submit and revive blighted properties across the nation. Join the movement." />
@@ -45,6 +46,7 @@
       display: flex;
       gap: 20px;
       margin: 0;
+      padding: 0;
     }
 
     nav ul li a {
@@ -66,7 +68,7 @@
 
     .swiper {
       width: 100%;
-      max-width: 700px;
+      max-width: 900px;
       margin: 0 auto 40px;
     }
 
@@ -76,14 +78,15 @@
       align-items: center;
       text-align: center;
       padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       border-radius: 12px;
       background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
     .swiper-slide img {
-      width: 80%;
+      width: 100%;
       max-width: 300px;
+      height: auto;
       border-radius: 10px;
       margin-bottom: 20px;
     }
@@ -146,13 +149,15 @@
 
     @media (max-width: 768px) {
       .section-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+      }
+
+      .swiper-slide img {
+        max-width: 80%;
       }
     }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
-
 <body>
   <!-- Navigation -->
   <nav>
@@ -164,7 +169,7 @@
     </ul>
   </nav>
 
-  <!-- Hero with Swipeable Slideshow -->
+  <!-- Swipeable Slideshow Hero -->
   <header>
     <h1 class="section-title">How ReviveHub Works</h1>
     <div class="swiper">
@@ -190,6 +195,8 @@
           <p>Follow the impact from eyesore to asset and share in the results.</p>
         </div>
       </div>
+      <!-- Optional Swiper Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
     <br>
     <a href="#submit" class="btn">Submit Your First Property</a>
@@ -228,15 +235,18 @@
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper', {
       loop: true,
       autoplay: {
         delay: 3500,
         disableOnInteraction: false,
       },
       slidesPerView: 1,
-      spaceBetween: 20,
-      grabCursor: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
     });
   </script>
 </body>
