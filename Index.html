@@ -171,3 +171,92 @@
   </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <img src="images/logo.png" alt="ReviveHub Logo">
+    <ul>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#submit">Submit</a></li>
+      <li><a href="#partner">Partner</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero with Slider -->
+  <header>
+    <h1 class="section-title">How ReviveHub Works</h1>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/Snap a photo.png" alt="Step 1">
+          <h3>Step 1: Snap a Photo</h3>
+          <p>Spot a blighted property and take a clear photo. You’re capturing opportunity.</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/EnterAddress.png" alt="Step 2">
+          <h3>Step 2: Enter the Address</h3>
+          <p>Provide the property’s location so we can begin our evaluation process.</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/We redevelop.png" alt="Step 3">
+          <h3>Step 3: We Redevelop</h3>
+          <p>We handle the research, contact, and action to transform the property.</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/trackresults.png" alt="Step 4">
+          <h3>Step 4: Track Results</h3>
+          <p>Follow the impact from eyesore to asset and share in the results.</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <a href="#submit" class="btn">Submit Your First Property</a>
+  </header>
+
+  <!-- Submission Section -->
+  <section id="submit">
+    <h2 class="section-title">Submit a Property</h2>
+    <form name="property-submission" method="POST" data-netlify="true">
+      <input type="text" name="address" placeholder="Property Address" required>
+      <input type="text" name="citystate" placeholder="City, State" required>
+      <input type="file" name="photo" accept="image/*">
+      <textarea name="description" rows="4" placeholder="Describe the property (optional)"></textarea>
+      <input type="email" name="email" placeholder="Your Email (for updates)">
+      <button type="submit">Send Property</button>
+    </form>
+  </section>
+
+  <!-- Partner Section -->
+  <section id="partner">
+    <h2 class="section-title">Partner With Us</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      Are you an investor, agent, or contractor? We provide off-market opportunities and partner on fix & flip or development projects. Let’s build the future together.
+    </p>
+    <div style="text-align:center; margin-top: 20px;">
+      <a href="https://calendly.com/" target="_blank" class="btn">Apply to Partner</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ReviveHub • Built by Home Rescue LLC<br>
+    <a href="#" style="color: #FFD700; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #FFD700; text-decoration: none;">Terms</a>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
