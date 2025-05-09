@@ -26,15 +26,13 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
-nav ul li a:hover {
+nav ul li a.active {
   color: #FFD700;
 }
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 .hero h1 {
   font-size: 3rem;
@@ -51,26 +49,41 @@ nav ul li a:hover {
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  cursor: pointer;
 }
-.cta-button:hover {
-  background-color: #e6c200;
-}
-.steps {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.form-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: rgba(255,255,255,0.05);
   padding: 2rem;
-}
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #333;
-  padding: 1.5rem;
   border-radius: 12px;
-  backdrop-filter: blur(10px);
+  border: 1px solid #333;
 }
-.card h2 {
-  color: #00FFC2;
+form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="file"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border-radius: 8px;
+  border: none;
+  background: #1f1f1f;
+  color: #fff;
+}
+form textarea {
+  resize: vertical;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 footer {
   text-align: center;
