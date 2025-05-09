@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit a Property</title>
+  <link rel="stylesheet" href="assets/styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">ReviveHub</div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/submit.html" class="active">Submit</a></li>
+      <li><a href="/partners.html">Partners</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Submit a Blighted Property</h1>
+    <p>Help revive your community. Submit the details below.</p>
+  </header>
+
+  <section class="form-section">
+    <form name="property-submission" method="POST" data-netlify="true" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="property-submission" />
+      <label>Address Line 1*
+        <input type="text" name="address-line1" required>
+      </label>
+      <label>Address Line 2
+        <input type="text" name="address-line2">
+      </label>
+      <label>City*
+        <input type="text" name="city" required>
+      </label>
+      <label>State*
+        <input type="text" name="state" required>
+      </label>
+      <label>ZIP Code*
+        <input type="text" name="zip" required>
+      </label>
+      <label>Upload a Photo*
+        <input type="file" name="property-photo" accept="image/*" required>
+      </label>
+      <label>Description
+        <textarea name="description" rows="4"></textarea>
+      </label>
+      <label>Your Name*
+        <input type="text" name="name" required>
+      </label>
+      <label>Phone*
+        <input type="tel" name="phone" required>
+      </label>
+      <label>Email*
+        <input type="email" name="email" required>
+      </label>
+      <label>Property Type
+        <select name="property-type">
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+          <option value="land">Land</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" name="confirmation" required> I confirm this is a real property I’ve seen
+      </label>
+      <button type="submit" class="cta-button">Submit Property</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 ReviveHub. Built for communities, by communities.</p>
+  </footer>
+</body>
+</html>
