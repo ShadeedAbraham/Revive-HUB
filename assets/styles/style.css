@@ -63,12 +63,8 @@ form label {
   display: block;
   margin-bottom: 1rem;
 }
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="file"],
-form select,
-form textarea {
+form input,
+form select {
   width: 100%;
   padding: 0.75rem;
   margin-top: 0.25rem;
@@ -77,13 +73,8 @@ form textarea {
   background: #1f1f1f;
   color: #fff;
 }
-form textarea {
-  resize: vertical;
-}
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.conditional {
+  display: none;
 }
 footer {
   text-align: center;
